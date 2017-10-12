@@ -1,0 +1,445 @@
+/*Importing Google Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Oxygen');
+
+/*Setting transition timing for all elements to 2 seconds*/
+*{
+    transition:all 0.5s;
+    box-sizing: border-box;
+}
+
+a{
+  text-decoration:none;
+}
+
+/*Styling the Body and other elements*/
+body{
+  font-family: Arial, sans-serif;
+  padding:0px;
+  text-align: center;
+  background-color:#000000;
+  opacity:0.9;
+  margin: 0;
+}
+ 
+#container{
+  top:0;
+  width:100%;
+  height:auto;
+  background:none;
+  margin:0 auto;
+}
+
+.home{
+  height:100%;
+  width:100%;
+  background-image:url("../images/home.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding:12px;
+}
+
+.home h3{
+  font-family:'Oxygen', sans-serif;
+  font-size:33px;
+  color:#fff;
+}
+
+.activities{
+  width:100%;
+  padding:10px;
+}
+
+.activities a{
+  color:white;
+  padding:8px;
+  width:50%;
+  border:solid #ffffff 1px;
+  border-radius:5px;
+  font-family:'Oxygen', sans-serif;
+  font-size:12px;
+}
+
+.home img{
+  max-width:300px;
+  height:auto;
+  margin-top:50px;
+  padding:0;
+}
+ 
+/*Mobile Navigation*/
+#nav ul{
+  list-style: none;
+  padding-left:0;
+}
+ 
+ #nav li{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+}
+ 
+#nav li a {
+  color: white;
+} 
+
+#nav li:hover{
+  background-color: #00a0c3;     
+}
+ 
+#nav li a:hover{
+  color:white;
+}
+ 
+#nav li ul {
+  position: absolute;
+  display: none;
+}
+
+/*Desktop and Tablet Navigation*/
+ .topnav {
+  background-color: #fff;
+  opacity:0.7;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:65px;
+  z-index: 1;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #118FB6;
+  text-align: center;
+  padding: 23px 30px;
+  font-size: 14px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.topnav a:hover{
+  background-color: #118FB6;
+  color: #fff;
+}
+
+.topnav h1{
+  font-family:'Pacifico', sans-serif;
+  font-size:33px;
+  color:#118FB6;
+  float:left;
+  text-align:left;
+  width:auto;
+  display:block;
+  letter-spacing:2px;
+  padding-left:15px;
+  line-height:15px;
+}
+
+.topnav:hover{
+  opacity:1;
+}
+
+/*Horizontal Rule*/
+hr{
+  width:50%;
+  border-style:dashed;
+  color:white;
+}
+
+/*Parallax Styling*/
+.parallax-container{
+  margin-top:20px;
+  width:100%;
+  height:300px;
+  border-top:solid #fff 2px;
+  border-bottom:solid #fff 2px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+/*Parallax images*/
+.boatcafe-img{
+  background-image:url("../images/boat-parallax.jpg");
+}
+
+.foxglove-img{
+  background-image:url("../images/fox-parallax.jpg");
+}
+
+.tepapa-img{
+  background-image:url("../images/tepapa-parallax.jpg");
+}
+
+.wellmuseum-img{
+  background-image:url("../images/wellmuseum-parallax.jpg");
+}
+
+.fergskayaks-img{
+  background-image:url("../images/fergs-parallax.jpg");
+}
+
+.crocbikes-img{
+  background-image:url("../images/crocbikes-parallax.jpg");
+}
+
+/*Styling Class for Icons: Food, Museum and Outdoor Activities*/
+.icon{
+  position:absolute;
+  width:50px;
+  height:50px;
+  margin:0px 6px;
+  right:0px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  border-radius:100%;
+  border:solid #fff 2px;
+  padding:5px;
+}
+
+.food-icon{
+  background-image:url("../icons/food.png");
+  border-color:#F08B1F;
+}
+
+.museum-icon{
+  background-image:url("../icons/museum.png");
+  border-color:#D95FB2;
+}
+
+.outdoor-icon{
+  background-image:url("../icons/outdoor.png");
+  border-color:#32A893;
+}
+
+/*Mobile Sizing for Navbars, show/hide when 1024px*/
+@media only screen and (max-width: 1024px){
+  .topnav, .parallax-container{
+    display:none;
+  }
+
+  #nav{
+    display:block;
+  }
+
+  .home h3{
+    display:none;
+  }
+}
+
+/*Tablet Sizing*/
+/*Navigation Media Query*/
+
+/*Show topnav and hide button nav when at a minimum of 1024px*/
+@media only screen and (min-width: 1025px){
+  .topnav a h1{
+    display:block;
+  }
+
+  .topnav{
+    opacity:1;
+  }
+
+  #nav{
+    display:none;
+  }
+
+  .home img{
+    margin-top:150px;
+  }
+
+  .home{
+    background-attachment:fixed;
+    height:750px;
+    border:solid #fff 2px;
+  }
+
+  .activities{
+    height:500px;
+  }
+
+  .activities p{
+    width:50%;
+    margin:15px auto 15px auto;
+  }
+
+  .activities img{display:none;}
+
+  #container{
+    margin:0 auto;
+    width:100%;
+  }
+}
+
+/*Tablet Screen Resizing*/
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+  .orangeBG, .pinkBG, .tealBG, .purpleBG{
+    background:none !important;
+  }
+
+  #nav li {display: inline-block;}
+
+  #nav ul {
+    text-align: center;
+    background:#ffffff;
+  }
+
+  .box {
+    width:45%;
+    float:left;
+    margin-left:2.5%;
+    display:inline-block;
+  }
+
+  .activities img {
+    width:100%;
+  }
+
+  #home img{
+    width: 500px;
+  }
+
+  #nav ul{
+    list-style: none;
+    padding:0;
+    margin-bottom:0;
+  }
+
+  #nav li{margin: 5px;}
+
+  #nav li a {
+    color: #00a0c3;
+    padding:15px;
+  }
+
+  #nav li a:hover{
+    background-color: #00a0c3;
+    color:#ffffff;
+  }
+
+  #nav li ul {
+    position: absolute;
+    display: none;
+  }
+
+  #nav{
+    bottom:0;
+    margin-bottom:0;
+  }
+
+  .home{
+    padding:0;
+  }
+
+}
+
+/*Hiding h1 for Nav*/
+@media only screen and (max-width: 1024px) {
+  .topnav h1{
+    display:none;
+  }
+    
+  .icon{
+    display:none;
+  }
+}
+
+/*Text Styling*/
+h3{
+	font-family: 'Pacifico', cursive;
+	font-size: 25px;
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+
+}
+
+p{
+   font-family: 'Oxygen', sans-serif;
+   color:#ffffff;
+   font-size:14px;
+}
+
+/*Color styling for text: font-color and background-color for links*/
+.orange {
+   color: #F08B1F;
+}
+
+.pink{
+   color: #D95FB2;
+}
+
+.teal{
+   color: #32A893;
+}
+
+.purple{
+   color: #6a01ba;
+}
+
+.orangeBG {
+   background-color:#F08B1F;
+}
+
+.pinkBG{
+   background-color: #D95FB2;
+}
+
+.tealBG {
+   background-color: #32A893;
+}
+
+.purpleBG {
+  background-color: #6a01ba;
+}
+
+/*Styling .activities, which holds the content*/
+.activities img{
+   border-radius:5px;
+   width:100%;
+ }
+ 
+ .activities {
+   width:100%;
+   height:auto;
+ }
+
+ iframe{
+  width:100%;
+  max-height:100%;
+ }
+
+.map-box{
+  display:inline-block;
+}
+
+ .max-stretch{
+  width:100%;
+  max-height:800px;
+  position:relative;
+  margin:20px auto 0px auto;
+  padding:10px;
+  display:inline-block;
+ }
+ 
+ /*Footer*/
+ #footer{
+  width:100%;
+  height:150px;
+  overflow:hidden;
+  background-color:#000;
+  border-top:solid #fff 2px;
+  background-color:#e1e1e1;
+  bottom:0px;
+  left:0px;
+ }
+
+ #footer p{
+  margin-top:40px;
+  color:#00a0c3;
+ }
